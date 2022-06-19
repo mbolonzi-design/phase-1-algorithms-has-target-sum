@@ -1,13 +1,26 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let i =0; i < array.length; i++){
+    let num = target - array[i];
+    for(let j = 0; j < array.length; j++){
+      if(array[j] === num && i != j)
+        return true;
+    }
+  }
+    return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  Here the function uses the quadratic time complexity for the nested loop
 */
 
 /* 
   Add your pseudocode here
+  take two items from the array
+  add them together
+  if the results is equivalent to the target return true
+  otherwise return false
 */
 
 /*
